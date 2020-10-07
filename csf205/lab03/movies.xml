@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<movies xmlns="http://movies.example">
+    <movie>
+        <title>a title</title>
+        <length>42</length>
+        <year>1908</year>
+        <cast>
+            <role ref="one">a role</role>
+        </cast>
+    </movie>
+    <person id="one">
+        <name>a person's name</name>
+        <birth>1900-01-01</birth>
+    </person>
+    <star id="two">
+        <name>a stars's name</name>
+        <birth>1900-01-01</birth>
+        <award>some movie award</award>
+    </star>
+</movies>
