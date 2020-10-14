@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# task A
+xmlstarlet sel -t -v //rcp:ingredient/@name recipes.xml
+xmlstarlet sel -t -v //rcp:recipe/rcp:ingredient[1]/@name recipes.xml && echo ""
+xmlstarlet sel -t -v //rcp:recipe/rcp:ingredient[@amount=1]/@name recipes.xml && echo ""
+
+
+http://xpather.com/
+
+//rcp:ingredient/@name
+//rcp:recipe/rcp:ingredient[1]/@name
+//rcp:recipe/rcp:ingredient[@amount=1]/@name
+//rcp:ingredient[@name="milk"]/ancestor::rcp:recipe/@id
+
+
+xmlstarlet tr ./recipes.xsl ./recipes.xml > recipes.html

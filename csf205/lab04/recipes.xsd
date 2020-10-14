@@ -1,0 +1,53 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.brics.dk/ixwt/recipes" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="collection" type="rec:collectionType" xmlns:rec="http://www.brics.dk/ixwt/recipes"/>
+  <xs:complexType name="ingredientType" mixed="true">
+    <xs:sequence>
+      <xs:element type="rec:ingredientType" name="ingredient" maxOccurs="unbounded" minOccurs="0" xmlns:rec="http://www.brics.dk/ixwt/recipes"/>
+      <xs:element type="rec:preparationType" name="preparation" minOccurs="0" xmlns:rec="http://www.brics.dk/ixwt/recipes"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="name" use="optional"/>
+    <xs:attribute type="xs:string" name="amount" use="optional"/>
+    <xs:attribute type="xs:string" name="unit" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="preparationType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="step" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="nutritionType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:short" name="calories" use="optional"/>
+        <xs:attribute type="xs:string" name="fat" use="optional"/>
+        <xs:attribute type="xs:string" name="carbohydrates" use="optional"/>
+        <xs:attribute type="xs:string" name="protein" use="optional"/>
+        <xs:attribute type="xs:string" name="alcohol" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="relatedType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="ref"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="recipeType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="title"/>
+      <xs:element type="xs:string" name="date"/>
+      <xs:element type="rec:ingredientType" name="ingredient" maxOccurs="unbounded" minOccurs="0" xmlns:rec="http://www.brics.dk/ixwt/recipes"/>
+      <xs:element type="rec:preparationType" name="preparation" xmlns:rec="http://www.brics.dk/ixwt/recipes"/>
+      <xs:element type="xs:string" name="comment" minOccurs="0"/>
+      <xs:element type="rec:nutritionType" name="nutrition" xmlns:rec="http://www.brics.dk/ixwt/recipes"/>
+      <xs:element type="rec:relatedType" name="related" minOccurs="0" xmlns:rec="http://www.brics.dk/ixwt/recipes"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="id" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="collectionType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="description"/>
+      <xs:element type="rec:recipeType" name="recipe" maxOccurs="unbounded" minOccurs="0" xmlns:rec="http://www.brics.dk/ixwt/recipes"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

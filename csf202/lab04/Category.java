@@ -12,5 +12,6 @@ public class Category {
 
    public void addUser(User user) {
         users.add(user);
+        user.addCategory(this);
    }
 }
