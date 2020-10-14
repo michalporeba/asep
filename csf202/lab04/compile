@@ -1,0 +1,3 @@
+#!/bin/bash
+
+javac User.java Category.java Forum.java Post.java Thread.java
