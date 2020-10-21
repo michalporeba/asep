@@ -1,14 +1,24 @@
 public abstract class Duck{
 	
+	protected FlyBehaviour flyBehaviour;
+	protected QuackBehaviour quackBehaviour;
+
+	public Duck(FlyBehaviour flyBehaviour, QuackBehaviour quackBehaviour) {
+		this.flyBehaviour = flyBehaviour;
+		this.quackBehaviour = quackBehaviour;
+	}
+
 	// Default fly method 
 	public void fly()
 	{
-		System.out.println("Fly: Zooms through the air gracefully.");
+		if (null!=flyBehaviour)
+			flyBehaviour.fly();
 	}
 
 	public void quack()
 	{
-		System.out.println("Quack: Quack");
+		if (null!=quackBehaviour)
+			quackBehaviour.quack();
 	}
 
 

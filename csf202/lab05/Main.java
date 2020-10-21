@@ -11,16 +11,18 @@ public class Main{
 		Duck mallardDuck = new MallardDuck();
 		Duck redDuck = new RedheadDuck();
 		Duck rubberDuck = new RubberDuck();
+		Duck decoyDuck = new DecoyDuck();
 
 		myDucks.add(mallardDuck);
 		myDucks.add(rubberDuck);
 		myDucks.add(redDuck);
-
+		myDucks.add(decoyDuck);
 		
 		for(Duck d : myDucks)
 		{
 			d.display();
 			d.fly();
+			d.quack();
 		}
 
 	}
