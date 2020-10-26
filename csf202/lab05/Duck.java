@@ -3,7 +3,7 @@ public abstract class Duck{
 	protected FlyBehaviour flyBehaviour;
 	protected QuackBehaviour quackBehaviour;
 
-	public Duck(FlyBehaviour flyBehaviour, QuackBehaviour quackBehaviour) {
+	protected Duck(FlyBehaviour flyBehaviour, QuackBehaviour quackBehaviour) {
 		this.flyBehaviour = flyBehaviour;
 		this.quackBehaviour = quackBehaviour;
 	}
