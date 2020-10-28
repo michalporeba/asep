@@ -1,0 +1,17 @@
+Hello, World!
+How are you today?
+
+1: HELLO, WORLD!
+2: HOW ARE YOU TODAY?
+
+3: TOM'S
+4:  LABS
+5:  ARE 
+6: THE B
+7: EST L
+8: ABS.
+
+9: EED U
+10: S OHM
+11: AT T!
+12: S'SSP
