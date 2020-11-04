@@ -1,0 +1,6 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "/home/michal/Dev/asep/csf205/lab06/**/*.jar"
+    ]
+}

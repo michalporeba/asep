@@ -1,0 +1,19 @@
+<computation xmlns="http://www.brics.dk/ixwt/while">
+  <input name="x"/>
+  <declare name="fac" value="1"/>
+  <whileNonZero name="x">
+    <assigns name="fac">
+      <mult>
+        <var name="fac"/>
+        <var name="x"/>
+      </mult>
+    </assigns>
+    <assign name="x">
+       <minus>
+         <var name="x"/>
+         <const value="1"/>
+       </minus>
+    </assign>
+  </whileNonZero>
+  <output name="fac"/>
+</computation>
